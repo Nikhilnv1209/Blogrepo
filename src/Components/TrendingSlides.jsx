@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LazyImage from '../utils/LazyImage';
 
 const TrendingSlides = ({ slidesData }) => {
   const [noOfElements, setNoOfElements] = useState(6);
@@ -16,11 +17,13 @@ const TrendingSlides = ({ slidesData }) => {
       {
         slides.map((slide) => (
           <div className="flex flex-col gap-4 px-[15px] min-h-[325px] cursor-pointer" key={slide.id}>
-            <img
+            {/* <img
               src={slide.image}
               alt="bannerimage"
+              loading='lazy'
               className="object-fill h-[193px] w-full opacity-90 duration-300 hover:opacity-100"
-            />
+            /> */}
+            <LazyImage src={slide.image} alt="bannerimage" />
             <div className="flex flex-col gap-4">
               <span className="font-Roboto">
                 <p className="font-[400] text-[13px] text-gray-500 space-x-2">
