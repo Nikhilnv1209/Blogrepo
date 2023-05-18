@@ -4,9 +4,11 @@ const HeaderSlides = memo(({slidesData}) => {
   useEffect(() => {
     console.log("header slides rendered");
   });
+
+
   return (
     <>
-    <aside className="">
+    <aside className="max-h-[30.45rem] h-[30.45rem] bg-gray-50 px-[.5rem] py-[.5rem]">
         <img
           src={slidesData[0].image}
           alt="bannerimage"
